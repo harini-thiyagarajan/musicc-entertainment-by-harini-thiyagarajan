@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Entertainment By Harini Thyagesh - Artists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0c0c0c;
+            color: #f0f0f0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #800000; /* Dark Red */
+            padding: 20px;
+            position: fixed;
+            width: 97.7%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 500;
+            color: #f0f0f0;
+        }
+
+        .logo span {
+            color: #f45c5c; /* Light Red */
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #f26d6d;
+        }
+
+        .artists {
+            margin-top: 80px; /* To account for fixed header */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .artists h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .artist-cards {
+            display: flex;
+            justify-content: center; /* Center the cards horizontally */
+            flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+            gap: 30px; /* Space between cards */
+        }
+
+        .artist-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .artist-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .artist-card img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .artist-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .artist-card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .more-info-btn {
+            background-color: #ff6666; /* Light Red */
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .more-info-btn:hover {
+            background-color: #fa9898; /* Lighter Red */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span>Music Entertainment </span>By Harini Thiyagarajan</div></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Albums</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="artists">
+        <h2>Featured Artists</h2>
+        
+        <div class="artist-cards">
+            <div class="artist-card" data-artist="Taylor Swift">
+                <img src="https://i.pinimg.com/236x/cb/fc/4d/cbfc4dfba00d8262192297faa85fee79.jpg" alt="Taylor Swift">
+                <h3>Taylor Swift</h3>
+                <p>Known for her narrative songwriting, Taylor has won numerous awards.</p>
+                <button onclick="window.location.href='https://en.wikipedia.org/wiki/Taylor_Swift';">More Info</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=1C6e2MoS814&pp=ygURdGF5bG9yIGxpc3Qgc29uZyA%3D';">Click Me</button>
+            </div>
+
+            <div class="artist-card" data-artist="Zayn Malik">
+                <img src="https://i.pinimg.com/236x/cd/bd/25/cdbd251c5c3ffdbaaa2f11c6e66c89a6.jpg" alt="Zayn Malik">
+                <h3>Zayn Malik</h3>
+                <p>Former One Direction member turned solo star, Zayn has a unique sound.</p>
+                <button onclick="window.location.href='https://en.wikipedia.org/wiki/Zayn_Malik';">More Info</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=jNVcnrGLdEo&pp=ygUPemF5biBsaXN0IHNvbmcg';">Click Me</button>
+            </div>
+
+            <div class="artist-card" data-artist="Selena Gomez">
+                <img src="https://i.pinimg.com/236x/35/10/42/351042fa75534bb8e5cf9fe90be57515.jpg" alt="Selena Gomez">
+                <h3>Selena Gomez</h3>
+                <p>A talented singer and actress, Selena's music resonates with many.</p>
+                <button onclick="window.location.href='https://en.wikipedia.org/wiki/Selena_Gomez';">More Info</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=wU5-FtXmA8U&pp=ygURc2VsZW5hIGxpc3Qgc29uZyA%3D';">Click Me</button>
+            </div>
+
+            <div class="artist-card" data-artist="Ariana Grande">
+                <img src="https://i.pinimg.com/236x/8f/a1/0e/8fa10e0c56c6d6ef773d46e0601c5aa8.jpg" alt="Ariana Grande">
+                <h3>Ariana Grande</h3>
+                <p>Known for her versatile style, Ariana Grande captivates audiences worldwide.</p>
+                <button onclick="window.location.href='https://en.wikipedia.org/wiki/Ariana_Grande';">More Info</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=JJ-_lHDqe7s&pp=ygUYYXJpYW5hIGdyYW5kZSBsaXN0IHNvbmcg';">Click Me</button>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const buttons = document.querySelectorAll('.more-info-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const artistName = this.parentElement.getAttribute('data-artist');
+                alert(`More info about ${artistName} coming soon!`);
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vibes - Buy Tickets</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/featured/?concert');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 4rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .btn {
+            background-color: #a00000;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+
+        .btn:hover {
+            background-color: #b00000;
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div>
+            <h1>Get Your Tickets Now!</h1>
+            <p>Don't miss out on the hottest concerts and events this season!</p>
+            <button class="btn" id="buyButton">Buy Tickets</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('buyButton').addEventListener('click', function() {
+            alert('Tickets purchased successfully! Enjoy the show!');
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #fff;
+        }
+
+        .music-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 20px;
+            color: #b22222; /* Dark Red */
+        }
+
+        .song-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .song-item {
+            background-color: #2c2c2c; /* Darker gray */
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .song-item:hover {
+            background-color: #a52727; /* Dark Red */
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .song-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .song-artist {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .artist-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .playing-indicator {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #ffd700; /* Gold */
+            border-radius: 50%;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .song-item.active .artist-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="music-section">
+        <h2 class="section-title">Now Playing</h2>
+        <ul class="song-list">
+            <li class="song-item" data-title="Song One" data-artist="Artist One">
+                <div class="playing-indicator"></div>
+                <img src="https://i.pinimg.com/236x/ad/7b/75/ad7b7527faaa19bd68378f6f41970f2d.jpg" alt="Artist One" class="artist-image">
+                <div class="song-title">Die For You By Weekend And Ariana</div>
+                <div class="song-artist">By Ariana and Abel</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=YQ-qToZUybM&pp=ygUZZGllIGZvciB5b3UgYXJpYW5hIGdyYW5kZQ%3D%3D';">Play Now</button>
+            </li>
+            <li class="song-item" data-title="Song Two" data-artist="Artist Two">
+                <div class="playing-indicator"></div>
+                <img src="https://i.pinimg.com/236x/74/20/91/74209195cfffa7bf51b9716fd792aaaf.jpg" alt="Artist Two" class="artist-image">
+                <div class="song-title">Perfect</div>
+                <div class="song-artist">By Ed Sheeran</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=cNGjD0VG4R8&pp=ygUScGVyZmVjdCBlZCBzaGVlcmFu';">Play Now</button>
+            </li>
+            <li class="song-item" data-title="Song Three" data-artist="Artist Three">
+                <div class="playing-indicator"></div>
+                <img src="https://i.pinimg.com/474x/d3/96/a3/d396a3cc69e454cf740435899a0e0132.jpg" alt="Artist Three" class="artist-image">
+                <div class="song-title">Dandelions</div>
+                <div class="song-artist">By Ruth B</div>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=WgTMeICssXY&pp=ygUKZGFuZGVsaW9ucw%3D%3D';">Play Now</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const songItems = document.querySelectorAll('.song-item');
+
+        songItems.forEach(song => {
+            song.addEventListener('click', () => {
+                // Remove active class from all songs
+                songItems.forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.playing-indicator').classList.remove('active');
+                });
+
+                // Add active class to the clicked song
+                song.classList.add('active');
+                song.querySelector('.playing-indicator').classList.add('active');
+
+                // Simulate song change (for demonstration)
+                const title = song.getAttribute('data-title');
+                const artist = song.getAttribute('data-artist');
+                console.log(`Now playing: ${title} by ${artist}`);
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Dates Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #fff;
+        }
+
+        .tour-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 20px;
+            color: #b22222; /* Dark Red */
+        }
+
+        .upcoming-shows {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .show-item {
+            background-color: #2c2c2c; /* Darker gray */
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .show-item:hover {
+            background-color: #b22222; /* Dark Red */
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .show-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .show-details {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .ticket-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #ffd700; /* Gold */
+            color: #1a1a1a; /* Dark background */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .ticket-link:hover {
+            background-color: #b22222; /* Dark Red */
+            color: #fff;
+        }
+
+        .map-container {
+            margin-top: 40px;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #b22222; /* Dark Red */
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease;
+        }
+
+        .map {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .map-container:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="tour-section">
+        <h2 class="section-title">Upcoming Tour Dates</h2>
+        <ul class="upcoming-shows">
+            <li class="show-item" data-title="Concert in New York" data-date="April 15, 2024" data-location="New York, NY" data-link="https://example.com/tickets/ny">
+                <div class="show-title">Concert in New York</div>
+                <div class="show-details">April 15, 2024</div>
+                <div class="show-details">New York, NY</div>
+                <a href="https://example.com/tickets/ny" class="ticket-link">Buy Tickets</a>
+            </li>
+            <li class="show-item" data-title="Show in Los Angeles" data-date="May 10, 2024" data-location="Los Angeles, CA" data-link="https://example.com/tickets/la">
+                <div class="show-title">Show in Los Angeles</div>
+                <div class="show-details">May 10, 2024</div>
+                <div class="show-details">Los Angeles, CA</div>
+                <a href="https://example.com/tickets/la" class="ticket-link">Buy Tickets</a>
+            </li>
+            <li class="show-item" data-title="Festival in Chicago" data-date="June 20, 2024" data-location="Chicago, IL" data-link="https://example.com/tickets/chicago">
+                <div class="show-title">Festival in Chicago</div>
+                <div class="show-details">June 20, 2024</div>
+                <div class="show-details">Chicago, IL</div>
+                <a href="https://example.com/tickets/chicago" class="ticket-link">Buy Tickets</a>
+            </li>
+        </ul>
+
+    <script>
+        const showItems = document.querySelectorAll('.show-item');
+
+        showItems.forEach(show => {
+            show.addEventListener('click', () => {
+                const title = show.getAttribute('data-title');
+                const date = show.getAttribute('data-date');
+                const location = show.getAttribute('data-location');
+                const link = show.getAttribute('data-link');
+
+                alert(`Now Playing: ${title}\nDate: ${date}\nLocation: ${location}\nGet your tickets here: ${link}`);
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Engagement</title>
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif; /* Standard font for readability */
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive; /* Decorative font for the heading */
+            font-size: 3rem;
+            color: #b22222;
+            animation: bounce 2s infinite;
+        }
+
+        .newsletter {
+            background: #b22222;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .newsletter:hover {
+            transform: scale(1.05);
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            outline: none;
+            font-size: 1rem; /* Increased font size for input */
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem; /* Increased font size for button */
+        }
+
+        button:hover {
+            background: #b22222;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Join Our Fan Community!</h1>
+        <div class="newsletter">
+            <h2>Newsletter Signup</h2>
+            <p>Stay updated with the latest news and events!</p>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+        <p id="responseMessage" style="display:none;"></p>
+    </div>
+
+    <script>
+        // Internal JavaScript
+        document.getElementById('signupBtn').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                document.getElementById('responseMessage').innerText = 'Thank you for signing up!';
+                document.getElementById('responseMessage').style.color = '#b22222';
+                document.getElementById('responseMessage').style.display = 'block';
+                document.getElementById('email').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System</title>
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif; /* Readable font */
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive; /* Decorative font */
+            font-size: 3rem;
+            color: #b22222;
+            animation: bounce 2s infinite;
+        }
+
+        .notification-section {
+            background: #b22222;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            animation: fadeIn 1s;
+        }
+
+        .notification-section:hover {
+            transform: scale(1.05);
+        }
+
+        .notification {
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+            animation: slideIn 0.5s forwards;
+            opacity: 0;
+        }
+
+        .notification:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #b22222;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stay Updated!</h1>
+        <div class="notification-section" id="notificationSection">
+            <h2>Notifications</h2>
+            <div id="notifications"></div>
+            <button id="clearBtn">Clear Notifications</button>
+        </div>
+    </div>
+
+    <script>
+        // Internal JavaScript
+        const notifications = [
+            "New Album Release: 'Chasing Stars' by The Nightingales!",
+            "Concert Alert: Don't miss the live performance by The Rockers on Friday!",
+            "Personalized Recommendation: Check out 'Melodic Dreams' playlist!",
+        ];
+
+        const notificationSection = document.getElementById('notifications');
+
+        function showNotifications() {
+            notifications.forEach((message, index) => {
+                const notificationDiv = document.createElement('div');
+                notificationDiv.className = 'notification';
+                notificationDiv.innerText = message;
+                notificationDiv.style.animationDelay = `${index * 0.3}s`; // Staggered animation
+                notificationSection.appendChild(notificationDiv);
+            });
+        }
+
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            notificationSection.innerHTML = ''; // Clear notifications
+        });
+
+        // Show notifications on page load
+        window.onload = showNotifications;
+    </script>
+</body>
+</html>
+
+
